@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 
-const senhasecreta = "secrect_key";
+const senhasecreta = "jwt_secret";
 
 const jwtConfig = { // HEADERS CONFIG
   expiresIn: '15m',
