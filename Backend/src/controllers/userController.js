@@ -21,7 +21,18 @@ const postUser = async (req, res, next) => {
     }
 };
 
+const login = async (req, res, next) => {
+    try {
+        const token = await userService.login(req.body);
+        res.status(201).json( token);
+    } catch (error) {
+        console.log(error.message);
+        next(error);
+    }
+};
+
 module.exports = {
     getUser,
-    postUser
+    postUser,
+    login
 };

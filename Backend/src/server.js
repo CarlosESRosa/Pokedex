@@ -9,6 +9,7 @@ const port = process.env.API_PORT || 3000;
 app.get('/ping', (req, res) => res.status(200).json({ message: 'pong' }));
 app.get('/user', userController.getUser);
 app.post('/user', userController.postUser);
+app.post('/login', userController.login);
 
 // não remova esse endpoint
 app.get('/', (_request, response) => {

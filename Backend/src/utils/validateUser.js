@@ -3,7 +3,7 @@ const errorHandler = require('./errorHandler');
 const validateUser = (body) => {
   const { username, password } = body;
 
-  if (!username || username.length < 5) { 
+  if (!username || username.length < 3) { 
     throw errorHandler(400, '"Username" length must be at least 5 characters long');
   }
 

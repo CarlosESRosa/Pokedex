@@ -5,7 +5,7 @@ const fetchPokemons = async () => {
 	for(let i = 0; i < data.results.length; i += 1 ) {
 		const response2 = await fetch(`https://pokeapi.co/api/v2/pokemon/${data.results[i].name}`);
 		const data2 = await response2.json();
-		arrayResult.push({id: data2.id, name: data2.name, image: data2.sprites.front_default})
+		arrayResult.push({name: data2.name, image: data2.sprites.front_default})
 	}
 	return arrayResult;
 }
@@ -16,7 +16,7 @@ const fetchTypes = async () => {
 	const arrayResult = [];
 	for(let i = 0; i < data.results.length; i += 1 ) {
 		if(data.results[i].name !== 'unknown')
-		arrayResult.push({id: i + 1, type: data.results[i].name})
+		arrayResult.push({ type: data.results[i].name})
 	}
 	return arrayResult;
 }

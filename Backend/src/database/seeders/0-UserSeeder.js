@@ -2,14 +2,12 @@ module.exports = {
     up: async (queryInterface, _Sequelize) => {
       await queryInterface.bulkInsert('users',
         [{
-            id: 1,
             username: 'Porsa',
-            password: 'Porsapass1',
+            password: '$2b$10$DfgPVSJGRknDl7WNYcb0U.I0yfyv0g3i1HrLgjtxBArFbYahMF/Su', // Porsapass1
         },
         {
-            id: 2,
             username: 'Rosa',
-            password: 'Rosapass1',
+            password: '$2b$10$5Qd1/hSjzmfAtCOfFk.JVOm0B8owvYxKJbtvuiXOQKUKyazUmyTCi', // Rosapass1
         },
         ], { timestamps: false });
     },
