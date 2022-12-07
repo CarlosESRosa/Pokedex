@@ -24,9 +24,9 @@ const postFavorite = async (req, res, next) => {
 
 const deleteFavorite = async (req, res, next) => {
     try {
-        const favorite = await favoriteService.deleteFavorite(req.body.user.data.username, req.body.pokemon_id);
+        await favoriteService.deleteFavorite(req.body.user.data.username, req.body.pokemon_id);
 
-        res.status(204).json( favorite );
+        res.status(204).json();
     } catch (error) {
         console.log(error.message);
         next(error);

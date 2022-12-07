@@ -4,7 +4,7 @@ const getUser = async (req, res, next) => {
     try {
         const users = await userService.getUser();
 
-        res.status(201).json( users );
+        res.status(200).json( users );
     } catch (error) {
         console.log(error.message);
         next(error);
@@ -24,7 +24,7 @@ const postUser = async (req, res, next) => {
 const login = async (req, res, next) => {
     try {
         const token = await userService.login(req.body);
-        res.status(201).json( token);
+        res.status(200).json( token);
     } catch (error) {
         console.log(error.message);
         next(error);
