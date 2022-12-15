@@ -4,9 +4,12 @@ const userController = require('./controllers/userController');
 const pokemonController = require('./controllers/pokemonController');
 const favoriteController = require('./controllers/favoriteController');
 const middlewares = require('./middlewares');
+var cors = require('cors')
+
+app.use(cors())
 
 // não remova a variável `API_PORT` ou o `listen`
-const port = process.env.API_PORT || 3000;
+const port = process.env.API_PORT || 3001;
 
 app.get('/ping', (req, res) => res.status(200).json({ message: 'pong' }));
 app.get('/user', userController.getUser);
