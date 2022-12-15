@@ -128,6 +128,7 @@
 
 .home-page .my-navbar .my-navbar-seeds div h4 {
   margin: 0px;
+  cursor: pointer;
 }
 
 .home-page .my-navbar .my-navbar-seeds div {

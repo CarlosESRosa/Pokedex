@@ -11,6 +11,7 @@ const Home = () => {
   const [stateUsername, setStateUsername] = useState("");
   const [statePokemonSearch, setStatePokemonSearch] = useState("");
   const [isLoading, setIsLoading] = useState(true);
+  const navigate = useNavigate();
 
   const loadDatas = async () => {
     const pokemons = await getPokemons();
@@ -50,10 +51,10 @@ const Home = () => {
             <h4>{stateUsername}</h4>
           </div>
           <div>
-            <h4>Home</h4>
+            <h4 onClick={() => navigate("/home")}>Home</h4>
           </div>
           <div>
-            <h4>Favorites</h4>
+            <h4 onClick={() => navigate("/favorites")}>Favorites</h4>
           </div>
           <div>
             <i className="fa-solid fa-right-from-bracket"></i>
