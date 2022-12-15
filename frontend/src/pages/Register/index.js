@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { requestLogin } from "../../utils/FetchApi";
+import { registerUser, requestLogin } from "../../utils/FetchApi";
 
-const Login = () => {
+const Register = () => {
   const [stateUsername, setStateUsername] = useState("");
   const [statePassword, setStatePassword] = useState("");
   const navigate = useNavigate();
@@ -16,8 +16,8 @@ const Login = () => {
     event.preventDefault();
 
     try {
+      await registerUser(stateUsername, statePassword);
       const token = await requestLogin(stateUsername, statePassword);
-
       localStorage.setItem("token", token);
       localStorage.setItem("user", stateUsername);
       navigate("/home");
@@ -36,7 +36,7 @@ const Login = () => {
 
   return (
     <div className="login-page">
-      <h1>LOGIN</h1>
+      <h1>REGISTER</h1>
       <form>
         <label htmlFor="username" className="form-label">
           Username
@@ -59,14 +59,11 @@ const Login = () => {
           id="password"
         />
         <button type="submit" className="btn btn-dark" onClick={handleSubmit}>
-          Login
-        </button>
-        <button onClick={() => navigate("/register")} className="btn btn-dark">
-          Register
+          Submit
         </button>
       </form>
     </div>
   );
 };
 
-export default Login;
+export default Register;

@@ -12,7 +12,6 @@ export const requestLogin = async (username, password) => {
     }
   );
 
-
   console.log(JSON.stringify(data));
 
   return data;
