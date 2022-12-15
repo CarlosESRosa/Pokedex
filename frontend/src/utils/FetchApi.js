@@ -42,7 +42,7 @@ export const getPokemons = async () => {
     },
   });
 
-  console.log(JSON.stringify(data));
+  //console.log(JSON.stringify(data));
 
   return data;
 };
