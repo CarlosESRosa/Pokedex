@@ -5,6 +5,7 @@
   line-height: 20px;
   max-width: 100px;
   margin: 0 1.5625% 0 0;
+  margin-top: 10px;
   width: 38.4375%;
   float: left;
   text-transform: none;
@@ -100,10 +101,18 @@
   color: #fff;
 }
 
+.not-favorited {
+  color: #fa96a7;
+}
+
+.favorited {
+  color: #9e0821;
+}
+
 /* /CONFIG */
 
 /* NAVBAR */
-.home-page .my-navbar {
+.my-navbar {
   color: white !important;
   height: 70px;
   display: flex;
@@ -111,36 +120,40 @@
   background-color: black !important;
 }
 
-.home-page .my-navbar i {
+.my-navbar i {
   font-size: 25px;
 }
 
-.home-page .my-navbar img {
+.my-navbar .logout-button {
+  cursor: pointer;
+}
+
+.my-navbar img {
   height: 50px;
   margin-left: 40px;
 }
 
-.home-page .my-navbar .my-navbar-seeds {
+.my-navbar .my-navbar-seeds {
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
 
-.home-page .my-navbar .my-navbar-seeds div h4 {
+.my-navbar .my-navbar-seeds div h4 {
   margin: 0px;
   cursor: pointer;
 }
 
-.home-page .my-navbar .my-navbar-seeds div {
+.my-navbar .my-navbar-seeds div {
   margin-right: 40px;
 }
 
-.home-page .my-navbar .my-navbar-seeds .nav-character {
+.my-navbar .my-navbar-seeds .nav-character {
   display: flex;
   align-items: center;
 }
 
-.home-page .my-navbar .my-navbar-seeds .nav-character i {
+.my-navbar .my-navbar-seeds .nav-character i {
   margin-right: 10px;
 }
 /* /NAVBAR */
@@ -184,7 +197,7 @@
 
 /* POKEMONS GRID */
 .home-page .pokemons-grid {
-  margin: 70px auto 0px auto;
+  margin: 30px auto 0px auto;
   width: 80%;
   display: flex;
   flex-wrap: wrap;
@@ -197,7 +210,16 @@
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.05);
   margin: 10px;
+  cursor: pointer;
 }
+
+.home-page .pokemons-grid .pokemon-card .favorite-grid {
+  display: flex;
+  text-align: end;
+  justify-content: end;
+  margin-bottom: -20px;
+}
+
 
 .home-page .pokemons-grid .pokemon-card div {
   display: flex;
@@ -207,6 +229,7 @@
 
 .home-page .pokemons-grid .pokemon-card div img {
   height: 150px;
+  margin-bottom: -10px;
 }
 
 .home-page .pokemons-grid .pokemon-card p {

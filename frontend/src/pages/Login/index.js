@@ -36,35 +36,46 @@ const Login = () => {
 
   return (
     <div className="login-page">
-      <h1>LOGIN</h1>
-      <form>
-        <label htmlFor="username" className="form-label">
-          Username
-        </label>
-        <input
-          type="text"
-          value={stateUsername}
-          onChange={(event) => handleChange(event, setStateUsername)}
-          className="form-control"
-          id="username"
-        />
-        <label htmlFor="password" className="form-label">
-          Password
-        </label>
-        <input
-          type="password"
-          value={statePassword}
-          onChange={(event) => handleChange(event, setStatePassword)}
-          className="form-control"
-          id="password"
-        />
-        <button type="submit" className="btn btn-dark" onClick={handleSubmit}>
-          Login
-        </button>
-        <button onClick={() => navigate("/register")} className="btn btn-dark">
-          Register
-        </button>
-      </form>
+      <div className="login-container">
+        <h1>LOGIN</h1>
+        <form>
+          <label htmlFor="username" className="form-label">
+            Username
+          </label>
+          <input
+            type="text"
+            value={stateUsername}
+            onChange={(event) => handleChange(event, setStateUsername)}
+            className="form-control"
+            id="username"
+          />
+          <label htmlFor="password" className="form-label">
+            Password
+          </label>
+          <input
+            type="password"
+            value={statePassword}
+            onChange={(event) => handleChange(event, setStatePassword)}
+            className="form-control"
+            id="password"
+          />
+          <div className="login-buttons">
+            <button
+              type="submit"
+              className="btn btn-dark"
+              onClick={handleSubmit}
+            >
+              Login
+            </button>
+            <button
+              onClick={() => navigate("/register")}
+              className="btn btn-dark"
+            >
+              Register
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };

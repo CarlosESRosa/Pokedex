@@ -55,7 +55,7 @@ export const getPokemonById = async (id) => {
     },
   });
 
-  console.log(JSON.stringify(data));
+  //  console.log(JSON.stringify(data));
 
   return data;
 };
@@ -67,7 +67,7 @@ export const getFavorites = async (token) => {
     },
   });
 
-  console.log(JSON.stringify(data));
+  //console.log(JSON.stringify(data));
 
   return data;
 };
@@ -85,13 +85,12 @@ export const favoritePokemon = async (token, id) => {
     }
   );
 
-  console.log(JSON.stringify(data));
+  // console.log(JSON.stringify(data));
 
   return data;
 };
 
 export const desfavoritePokemon = async (token, id) => {
-  console.log(token);
   const data = axios.delete("http://127.0.0.1:3001/favorite", {
     headers: {
       Authorization: token,
@@ -101,5 +100,5 @@ export const desfavoritePokemon = async (token, id) => {
     },
   });
 
-  console.log(JSON.stringify(data));
+  //  console.log(JSON.stringify(data));
 };

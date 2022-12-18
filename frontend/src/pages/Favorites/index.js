@@ -6,7 +6,7 @@ import Loading from "../Loading";
 import roseImg from "../../img/rose.png";
 import Navbar from "../../components/Navbar";
 
-const Home = () => {
+const Favorites = () => {
   const [statePokemons, setStatePokemons] = useState([]);
   const [stateFavorites, setStateFavorites] = useState([]);
   const [statePokemonsCopy, setStatePokemonsCopy] = useState([]);
@@ -21,7 +21,10 @@ const Home = () => {
     const favorites = await getFavorites(token);
     const favoriteIds = favorites.map((element) => element.pokemon_id);
     const userLocalStorage = localStorage.getItem("user");
-    setStatePokemons(pokemons);
+    const favoritesPokemons = pokemons.filter((element) =>
+      favoriteIds.includes(element.id)
+    );
+    setStatePokemons(favoritesPokemons);
     setStateFavorites(favoriteIds);
     setStatePokemonsCopy(pokemons);
     setStateUsername(userLocalStorage);
@@ -113,4 +116,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Favorites;
