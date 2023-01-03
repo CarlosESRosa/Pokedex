@@ -8,7 +8,6 @@ import Navbar from "../../components/Navbar";
 
 const Favorites = () => {
   const [statePokemons, setStatePokemons] = useState([]);
-  const [stateFavorites, setStateFavorites] = useState([]);
   const [statePokemonsCopy, setStatePokemonsCopy] = useState([]);
   const [stateUsername, setStateUsername] = useState("");
   const [statePokemonSearch, setStatePokemonSearch] = useState("");
@@ -25,8 +24,7 @@ const Favorites = () => {
       favoriteIds.includes(element.id)
     );
     setStatePokemons(favoritesPokemons);
-    setStateFavorites(favoriteIds);
-    setStatePokemonsCopy(pokemons);
+    setStatePokemonsCopy(favoritesPokemons);
     setStateUsername(userLocalStorage);
     setIsLoading(false);
   };
@@ -39,6 +37,7 @@ const Favorites = () => {
     const filtredPokemons = statePokemonsCopy.filter((element) =>
       element.name.includes(statePokemonSearch)
     );
+    console.log("entrou", filtredPokemons);
     setStatePokemons(filtredPokemons);
   }
 
@@ -86,11 +85,10 @@ const Favorites = () => {
               key={element.id}
               onClick={(event) => pokeInfo(event, element)}
             >
-              {stateFavorites.includes(element.id) && (
-                <div className="favorite-grid">
-                  <i className="fa-sharp fa-solid fa-heart favorited"></i>
-                </div>
-              )}
+              <div className="favorite-grid">
+                <i className="fa-sharp fa-solid fa-heart favorited"></i>
+              </div>
+
               <div>
                 <img src={element.image} alt="pokemon image"></img>
               </div>
