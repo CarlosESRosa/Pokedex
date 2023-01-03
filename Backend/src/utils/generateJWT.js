@@ -1,10 +1,11 @@
-const jwt = require('jsonwebtoken');
+const jwt = require("jsonwebtoken");
 
 const senhasecreta = "jwt_secret";
 
-const jwtConfig = { // HEADERS CONFIG
-  expiresIn: '15m',
-  algorithm: 'HS256',
+const jwtConfig = {
+  // HEADERS CONFIG
+  expiresIn: "60m",
+  algorithm: "HS256",
 };
 
 const generateJWT = (payload) => {
