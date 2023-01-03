@@ -9,6 +9,7 @@ import Favorites from "./pages/Favorites";
 import "./pages/Home/Home.css";
 import "./pages/PokeInfo/PokeInfo.css";
 import "./pages/Login/Login.css";
+import "./components/Navbar.css";
 
 function App() {
   return (

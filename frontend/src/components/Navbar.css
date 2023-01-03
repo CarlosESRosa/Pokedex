@@ -1,0 +1,16 @@
+.header {
+  background-color: black;
+}
+
+.header .navbar-brand img {
+  width: 60px;
+}
+
+.header ul li a {
+  color: white !important;
+}
+
+.header .navbar button {
+  background-color: white;
+  color: black;
+}

@@ -111,54 +111,6 @@
 
 /* /CONFIG */
 
-/* NAVBAR */
-.my-navbar {
-  color: white !important;
-  height: 70px;
-  display: flex;
-  align-items: center;
-  background-color: black !important;
-}
-
-.my-navbar i {
-  font-size: 25px;
-}
-
-.my-navbar .logout-button {
-  cursor: pointer;
-}
-
-.my-navbar img {
-  height: 50px;
-  margin-left: 40px;
-}
-
-.my-navbar .my-navbar-seeds {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.my-navbar .my-navbar-seeds div h4 {
-  margin: 0px;
-  cursor: pointer;
-}
-
-.my-navbar .my-navbar-seeds div {
-  margin-right: 40px;
-}
-
-.my-navbar .my-navbar-seeds .nav-character {
-  display: flex;
-  align-items: center;
-}
-
-.my-navbar .my-navbar-seeds .nav-character i {
-  margin-right: 10px;
-}
-/* /NAVBAR */
-
-
 /* SEARCH BOX */
 .home-page .search-box {
   margin-top: 100px;
@@ -172,7 +124,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5px
+  gap: 5px;
 }
 
 .home-page .search-box .search-form label {
@@ -193,7 +145,6 @@
 }
 
 /* /SEARCH BOX */
-
 
 /* POKEMONS GRID */
 .home-page .pokemons-grid {
@@ -219,7 +170,6 @@
   justify-content: end;
   margin-bottom: -20px;
 }
-
 
 .home-page .pokemons-grid .pokemon-card div {
   display: flex;
